@@ -6,19 +6,22 @@
     <title>Mastering Jquery</title>
     <script src="../jquery-3.6.0.min.js"></script>
     <script>
-      $(document).ready(function(){
-        $('.para_class').click(function(){
-            $(".p").css("color","red");
+     $(document).ready(function(){
+        $('.para_first').click(function(){
+            $(".p:first").css("color","gray");
         });
-        $('#para_id').click(function(){
-            $("#p").css("color","blue");
+        $('.para_last').click(function(){
+            $(".p:last").css("color","blue");
         });
-        $('#multiple_selector').click(function(){
-            $("p, h1").css("background","lightpink");
+        $('.para_odd').click(function(){
+            $(".p:odd").css("color","orange");
         });
 
-      });
+        $('.para_even').click(function(){
+            $("p:even").css("background","lightcoral");
+        });
 
+     });
     </script>
     <style>
         body{
@@ -45,23 +48,19 @@
 </head>
 <body>
     <div class="container">
-        <h1>Selector - Class and ID</h1>
-        <p class="p"> This is a first paragraph with
-            class p</p>
-         <p class="p">This is a second paragraph with
-                class p</p>
-                <p id="p">This is a paragraph with id p</p>
-                <p id="p">This is a paragraph with id p2</p>
-                <button class="para_class">Class Button</button>
-                <button id="para_id">Id Button</button>
+        <h1>Selector - first, last, even, odd</h1>
+     <p class="p"> This is a odd paragraph with first selector</p>
+         <p class="p">This is a even paragraph with last selector</p>
+           <p class="p">This is a odd third paragraph with last selector</p>
+           <p class="p">This is a even paragraph with last selector</p>
+           
+           <button class="para_first">:first selector</button>
+           <button class="para_last">:last selector</button>  
+           <button class="para_even">:even selector</button> 
+           <button class="para_odd">:odd selector</button>  
 
     </div>
-    <div class="container">
-        <h1>Multiple Element - Selector</h1>
-        <p>This is a paragraph</p>
-        <h1>Heading H1</h1>
-<button id="multiple_selector">Multiple Selector</button>
-    </div>
+  
     
 </body>
 </html>
