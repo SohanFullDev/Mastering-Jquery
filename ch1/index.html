@@ -6,11 +6,9 @@
     <title>Mastering Jquery</title>
     <script src="../jquery-3.6.0.min.js"></script>
     <script>
-        $(document).ready(function(){
-            $('p').append('<div style="background-color:yellow;font-size:21px"><ol><li>Donec semper mauris sed enim faucibus condimentum.</li><li>Sedvel lectus condimentum, laoreet nisl non, dictumodio.</li> <li>laoreet nisl non, dictum odio.</li></ol></div>');
-
-        });
-
+     $(document).ready(function(){
+        $('.div1').before('<div style="background-color:pink; font-size:28px;">New div is created by using before() method in jquery before the previous div</div>');
+     });
     </script>
     <style>
         body{
@@ -34,12 +32,27 @@
 </head>
 <body>
     <div class="container">
-        <h1>jQuery append() method</h1>
-        <div class="div1">
-            <p>When your page reload then below you will see the list that append with this paragraphp</p>
+       <h1>Jquery before() method </h1>
+       <ul>
+        <li>Lorem ipsum dolor sit, consectetur
+            adipiscing elit.</li>
+        <li> Sed id tellus at velit facilisis
+            mollis.</li>
+        <li>Pellentesque ac sem mattis est facilisis
+            posuere ac fermentum diam.</li>
 
-        </div>
-     
+       </ul>
+       <ol>
+        <li>Donec semper mauris sed enim
+            faucibus condimentum.</li>
+        <li>Sed vel lectus condimentum, laoreet
+            nisl non, dictum odio.</li>
+            <li> laoreet nisl non, dictum odio. </li>
+       </ol>
+     <div class="div1">
+        <p>This is div section</p>
+     </div>
+    
 
     </div>
   
