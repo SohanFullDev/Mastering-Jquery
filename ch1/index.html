@@ -6,36 +6,61 @@
     <title>Mastering Jquery</title>
     <script src="../jquery-3.6.0.min.js"></script>
     <script>
-        $(document).ready(function(){
-            $('#demo').click(function(){
-                alert("Button is clicked");
-            });
-
+      $(document).ready(function(){
+        $('.para_class').click(function(){
+            $(".p").css("color","red");
         });
+        $('#para_id').click(function(){
+            $("#p").css("color","blue");
+        });
+        $('#multiple_selector').click(function(){
+            $("p, h1").css("background","lightpink");
+        });
+
+      });
 
     </script>
     <style>
+        body{
+            text-align: left;
+            margin: 5%;
+            padding: 5%;
+        }
+        .container{
+            border-radius: 20px;
+            padding: 5%;
+            border: 5px solid rgb(136, 77, 77);
+            box-shadow: 10px 10px 10px gray;
+        }
+        button{
+            font-size: 24px;
+            border: none;
+            border-radius: 20px;
+            padding: 20px;
+            background-color: rgb(80,243,47);
 
+        }
 
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>* Element Selector</h1>
-        <ul>
-            <li>Lorem ipsum dolor sit amet consectetur </li>
-            <li>Dolore molestiae saepe ullam amet rem rerum</li>
-            <li>labore nesciunt assumenda debitis praesentium?</li>
-        </ul>
-        <ol>
-            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.  </li>
-            <li>Tempora odio illo libero inventore?</li>
-            <li>Doloribus magnam labore at modi maxime voluptates.</li>
-        </ol>
-        <div class="">
-            <p></p>
-        </div>
-<button id="demo">demo</button>
+        <h1>Selector - Class and ID</h1>
+        <p class="p"> This is a first paragraph with
+            class p</p>
+         <p class="p">This is a second paragraph with
+                class p</p>
+                <p id="p">This is a paragraph with id p</p>
+                <p id="p">This is a paragraph with id p2</p>
+                <button class="para_class">Class Button</button>
+                <button id="para_id">Id Button</button>
+
+    </div>
+    <div class="container">
+        <h1>Multiple Element - Selector</h1>
+        <p>This is a paragraph</p>
+        <h1>Heading H1</h1>
+<button id="multiple_selector">Multiple Selector</button>
     </div>
     
 </body>
