@@ -6,22 +6,11 @@
     <title>Mastering Jquery</title>
     <script src="../jquery-3.6.0.min.js"></script>
     <script>
-     $(document).ready(function(){
-        $('.para_first').click(function(){
-            $(".p:first").css("color","gray");
-        });
-        $('.para_last').click(function(){
-            $(".p:last").css("color","blue");
-        });
-        $('.para_odd').click(function(){
-            $(".p:odd").css("color","orange");
+        $(document).ready(function(){
+            $('p').append('<div style="background-color:yellow;font-size:21px"><ol><li>Donec semper mauris sed enim faucibus condimentum.</li><li>Sedvel lectus condimentum, laoreet nisl non, dictumodio.</li> <li>laoreet nisl non, dictum odio.</li></ol></div>');
+
         });
 
-        $('.para_even').click(function(){
-            $("p:even").css("background","lightcoral");
-        });
-
-     });
     </script>
     <style>
         body{
@@ -35,29 +24,22 @@
             border: 5px solid rgb(136, 77, 77);
             box-shadow: 10px 10px 10px gray;
         }
-        button{
-            font-size: 24px;
-            border: none;
-            border-radius: 20px;
-            padding: 20px;
-            background-color: rgb(80,243,47);
+       .div1{
+        border: 1px solid;
+        margin: 2px 0 2px 0;
+       }
 
-        }
 
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>Selector - first, last, even, odd</h1>
-     <p class="p"> This is a odd paragraph with first selector</p>
-         <p class="p">This is a even paragraph with last selector</p>
-           <p class="p">This is a odd third paragraph with last selector</p>
-           <p class="p">This is a even paragraph with last selector</p>
-           
-           <button class="para_first">:first selector</button>
-           <button class="para_last">:last selector</button>  
-           <button class="para_even">:even selector</button> 
-           <button class="para_odd">:odd selector</button>  
+        <h1>jQuery append() method</h1>
+        <div class="div1">
+            <p>When your page reload then below you will see the list that append with this paragraphp</p>
+
+        </div>
+     
 
     </div>
   
